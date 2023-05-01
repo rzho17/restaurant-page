@@ -4,7 +4,7 @@ const createP = (text) => {
   return p;
 };
 
-const homeContent = (() => {
+const homeContent = () => {
   const content = document.querySelector("#content");
 
   const h1 = document.createElement("h1");
@@ -31,6 +31,27 @@ const homeContent = (() => {
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quasi harum numquam, eius odio, recusandae mollitia eaque et accusantium iure provident. Ab excepturi rerum fuga inventore itaque dolores modi dicta."
     )
   );
-})();
+};
+
+export function tabHome() {
+  const d = document.querySelector(".home");
+  const content = document.querySelector("#content");
+  d.addEventListener("click", () => {
+    console.log("hi");
+    content.innerHTML = "";
+    homeContent();
+  });
+}
+
+//reference to change the tabs
+
+// export function test2() {
+//   const d = document.querySelector(".menu");
+//   const content = document.querySelector("#content");
+//   d.addEventListener("click", () => {
+//     console.log("bye");
+//     homeContent();
+//   });
+// }
 
 export default homeContent;
