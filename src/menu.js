@@ -1,4 +1,6 @@
-const makeHeader = (text, name) => {
+import { tabHome } from "./home";
+
+export const makeHeader = (text, name) => {
   const h2 = document.createElement("h2");
   h2.textContent = text;
   h2.className = name;
@@ -65,19 +67,30 @@ const makeMenu = () => {
     },
   };
 
+  const displayItem = (obj) => {
+    Object.values(obj).forEach((item) => {
+      content.append(makeItem(item[1], item[2], item[3]));
+    });
+  };
+
   content.append(makeHeader("Drinks", "drinks"));
 
-  Object.values(drinkItems).forEach((item) => {
-    content.append(makeItem(item[1], item[2], item[3]));
-  });
+  displayItem(drinkItems);
 
   content.append(makeHeader("Dishes", "dishes"));
 
-  Object.values(dishItem).forEach((item) => {
-    content.append(makeItem(item[1], item[2], item[3]));
-  });
+  displayItem(dishItem);
 };
 
-makeMenu();
+// makeMenu();
+
+export function tabMenu() {
+  const d = document.querySelector(".menu");
+  const content = document.querySelector("#content");
+  d.addEventListener("click", () => {
+    content.innerHTML = "";
+    makeMenu();
+  });
+}
 
 export default makeMenu;

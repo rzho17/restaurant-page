@@ -1,4 +1,4 @@
-const createP = (text) => {
+export const createP = (text) => {
   const p = document.createElement("p");
   p.textContent = text;
   return p;
@@ -37,7 +37,6 @@ export function tabHome() {
   const d = document.querySelector(".home");
   const content = document.querySelector("#content");
   d.addEventListener("click", () => {
-    console.log("hi");
     content.innerHTML = "";
     homeContent();
   });
