@@ -16,7 +16,7 @@ const makeItem = (imgSrc, p, i) => {
   const priceContainer = document.createElement("div");
   const inlinePrice = document.createElement("span");
   const mora = document.createElement("img");
-  mora.src = imgSrc;
+  mora.src = "../src/assets/mora.webp";
   mora.className = "mora";
   const price = document.createElement("p");
   price.className = "price";
@@ -35,20 +35,22 @@ const makeItem = (imgSrc, p, i) => {
 
 const makeMenu = () => {
   const content = document.querySelector("#content");
+  const container = document.createElement("div");
+  container.className = "container";
 
   const h1 = document.createElement("h1");
   h1.textContent = "Menu";
   h1.className = "name";
-  content.append(h1);
+  container.append(h1);
 
   const drinkItems = {
     item1: {
-      1: "../src/assets/angels-share-exterior.png",
+      1: "../src/assets/item_apple_cider.webp",
       2: "1000",
       3: "something freshhh",
     },
     item2: {
-      1: "../src/assets/angels-share-exterior.png",
+      1: "../src/assets/item_mint_burst.webp",
       2: "200",
       3: "bye",
     },
@@ -56,7 +58,7 @@ const makeMenu = () => {
 
   const dishItem = {
     item1: {
-      1: "../src/assets/angels-share-exterior.png",
+      1: "../src/assets/item_Mondstadt_Hash_Brown.webp",
       2: "1000",
       3: "food",
     },
@@ -69,17 +71,19 @@ const makeMenu = () => {
 
   const displayItem = (obj) => {
     Object.values(obj).forEach((item) => {
-      content.append(makeItem(item[1], item[2], item[3]));
+      container.append(makeItem(item[1], item[2], item[3]));
     });
   };
 
-  content.append(makeHeader("Drinks", "drinks"));
+  container.append(makeHeader("Drinks", "drinks"));
 
   displayItem(drinkItems);
 
-  content.append(makeHeader("Dishes", "dishes"));
+  container.append(makeHeader("Dishes", "dishes"));
 
   displayItem(dishItem);
+
+  content.append(container);
 };
 
 // makeMenu();

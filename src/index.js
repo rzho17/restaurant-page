@@ -1,14 +1,13 @@
 import createHeader from "./initial-load";
-import makeMenu from "./menu";
-import makeAbout from "./about";
-import { tabHome } from "./home";
+import { createFooter } from "./initial-load";
+
+import { tabHome, homeContent } from "./home";
 import { tabMenu } from "./menu";
 import { tabAbout } from "./about";
 
 createHeader();
-// makeMenu();
-
-// makeAbout();
+homeContent();
+createFooter();
 
 tabHome();
 tabMenu();

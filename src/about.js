@@ -17,7 +17,7 @@ const makeAbout = () => {
   const h1 = document.createElement("h1");
   h1.textContent = "About";
   h1.className = "name";
-  content.append(h1);
+  container.append(h1);
 
   const ownerPic = document.createElement("img");
   ownerPic.className = "owner";

@@ -20,10 +20,18 @@ const createHeader = () => {
   nav.className = "nav";
   header.append(nav);
 
+  const navContainer = document.createElement("div");
+  navContainer.className = "navContainer";
+  nav.append(navContainer);
+
+  const navTitle = document.createElement("h1");
+  navTitle.textContent = "Genshin";
+  navContainer.append(navTitle);
+
   const navLogo = document.createElement("img");
-  navLogo.src = "../src/assets/angels-share-exterior.png";
+  navLogo.src = "../src/assets/noctua_shape.webp";
   navLogo.className = "logo";
-  nav.appendChild(navLogo);
+  navContainer.appendChild(navLogo);
 
   const navUl = document.createElement("ul");
   navUl.className = "ul";
@@ -32,6 +40,16 @@ const createHeader = () => {
   navUl.appendChild(createLi("Home", "home"));
   navUl.appendChild(createLi("Menu", "menu"));
   navUl.appendChild(createLi("About", "about"));
+};
+
+export const createFooter = () => {
+  const body = document.querySelector("body");
+  const content = document.querySelector("#content");
+
+  const footer = document.createElement("footer");
+  footer.className = "footer";
+  footer.textContent = "hi";
+  body.append(footer);
 };
 
 //displays initial load

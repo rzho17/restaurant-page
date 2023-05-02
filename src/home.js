@@ -4,33 +4,38 @@ export const createP = (text) => {
   return p;
 };
 
-const homeContent = () => {
+export const homeContent = () => {
   const content = document.querySelector("#content");
+
+  const container = document.createElement("div");
+  container.className = "container";
 
   const h1 = document.createElement("h1");
   h1.textContent = "Welcome to the Angel's Share Tavern";
   h1.className = "title";
-  content.appendChild(h1);
+  container.appendChild(h1);
 
   const img = document.createElement("img");
   img.src = "../src/assets/angels-share-exterior.png";
-  content.appendChild(img);
+  container.appendChild(img);
 
-  content.appendChild(
+  container.appendChild(
     createP(
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quasi harum numquam, eius odio, recusandae mollitia eaque et accusantium iure provident. Ab excepturi rerum fuga inventore itaque dolores modi dicta."
     )
   );
-  content.appendChild(
+  container.appendChild(
     createP(
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quasi harum numquam, eius odio, recusandae mollitia eaque et accusantium iure provident. Ab excepturi rerum fuga inventore itaque dolores modi dicta."
     )
   );
-  content.appendChild(
+  container.appendChild(
     createP(
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quasi harum numquam, eius odio, recusandae mollitia eaque et accusantium iure provident. Ab excepturi rerum fuga inventore itaque dolores modi dicta."
     )
   );
+
+  content.append(container);
 };
 
 export function tabHome() {

@@ -1,31 +1,88 @@
+@font-face {
+  font-family: "genshin";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../src/fonts/zhcn.woff");
+}
+:root {
+  --font: white;
+}
 body {
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
   box-sizing: border-box;
+  font-family: "genshin", sans-serif;
+  color: var(--font);
+  background-attachment: fixed;
+  background-image: url(../src/assets/angels-share-exterior.png);
+  background-size: cover;
 }
+
+img {
+  width: 50px;
+}
+
 header {
   width: 100%;
-  background-color: red;
+  background-color: gray;
 }
 
 nav {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 5rem;
+  padding: 1rem;
+}
 ul {
+  font-size: 2rem;
   display: flex;
   width: fit-content;
   justify-content: flex-end;
+
+  list-style: none;
 }
 
 li {
   margin: 0 4rem;
 }
-img {
-  width: 50px;
-}
 
+#content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  border: 1px solid blue;
+}
 .price {
   display: inline-block;
+}
+
+.container {
+  width: 50rem;
+  /* margin: 0 auto; */
+  border: 1px solid white;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* background-color: red; */
+  color: white;
+  text-align: center;
 }
