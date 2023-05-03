@@ -25,7 +25,7 @@ const createHeader = () => {
   nav.append(navContainer);
 
   const navTitle = document.createElement("h1");
-  navTitle.textContent = "Genshin";
+  navTitle.textContent = "Angel's Share";
   navContainer.append(navTitle);
 
   const navLogo = document.createElement("img");
@@ -48,11 +48,14 @@ export const createFooter = () => {
 
   const footer = document.createElement("footer");
   footer.className = "footer";
-  footer.textContent = "hi";
+  const date = new Date();
+  const year = date.getFullYear();
+  const link = document.createElement("a");
+  link.href = "https://github.com/rzho17";
+  const makeText = document.createTextNode(`rzho17 ${year}`);
+  link.append(makeText);
+  footer.append(link);
   body.append(footer);
 };
-
-//displays initial load
-// homeContent();
 
 export default createHeader;
