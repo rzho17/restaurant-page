@@ -42,7 +42,7 @@ const makeAbout = () => {
 
   container.append(makeH3("Location", "aboutInfo"));
   const locationPic = document.createElement("img");
-  locationPic.className = "owner";
+  locationPic.className = "map";
   locationPic.src = "../src/assets/map.png";
   container.append(locationPic);
 
