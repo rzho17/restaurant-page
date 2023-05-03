@@ -21,7 +21,7 @@ const makeAbout = () => {
 
   const ownerPic = document.createElement("img");
   ownerPic.className = "owner";
-  ownerPic.src = "../src/assets/diluc_icon.webp";
+  ownerPic.src = "assets/diluc_icon.webp";
   container.append(ownerPic);
 
   container.append(makeH3("Meet the Owner: Diluc!", "aboutInfo"));
@@ -43,7 +43,7 @@ const makeAbout = () => {
   container.append(makeH3("Location", "aboutInfo"));
   const locationPic = document.createElement("img");
   locationPic.className = "map";
-  locationPic.src = "../src/assets/map.png";
+  locationPic.src = "assets/map.png";
   container.append(locationPic);
 
   content.append(container);
