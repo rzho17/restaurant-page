@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "genshin";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/zhcn.woff");
+}
+:root {
+  --font: white;
+}
+
+/* general styles */
+body {
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "genshin", sans-serif;
+  color: var(--font);
+  background-attachment: fixed;
+  background-image: url(assets/interior.png);
+  background-size: cover;
+}
+
+img {
+  width: 50px;
+}
+
+/* Nav */
+
+header {
+  height: 100px;
+  width: 100%;
+
+  backdrop-filter: blur(20px);
+
+  box-shadow: 0px -10px 5px 10px black;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+nav {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 5rem;
+  padding: 1rem;
+}
+ul {
+  font-size: 2rem;
+  display: flex;
+  width: fit-content;
+  justify-content: flex-end;
+
+  list-style: none;
+}
+
+li {
+  margin: 0 4rem;
+  padding: 1rem;
+}
+
+p {
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+}
+/* tab containers */
+#content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.price {
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50rem;
+
+  padding: 2rem;
+  margin: 3rem 0;
+  backdrop-filter: blur(4px);
+}
+
+/* Home Page styles */
+h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.showRoom {
+  /* border: 1px solid; */
+  border-radius: 50px;
+  width: 100%;
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
+}
+
+/* Menu */
+.foodContainer {
+  display: grid;
+  grid-template-areas:
+    "menu menu menu menu"
+    "hd hd hd hd"
+    "dr dr dr dr "
+    "hd2 hd2 hd2 hd2"
+    "fd fd fd fd";
+
+  justify-content: center;
+  align-items: center;
+
+  width: 60rem;
+  gap: 1rem;
+  padding-bottom: 5rem;
+}
+
+.name {
+  grid-area: menu;
+}
+
+.drinks {
+  grid-area: hd;
+}
+
+.dishes {
+  grid-area: hd2;
+}
+
+.name,
+.drinks,
+.dishes {
+  justify-self: center;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 500px;
+}
+
+.food {
+  width: 200px;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+}
+
+/* About */
+
+.owner {
+  width: 15rem;
+}
+
+.map {
+  width: 40rem;
+  /* border: 1px solid; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
+}
+
+.footer {
+  font-size: 2rem;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+/* UI features  */
+
+h1:hover,
+.logo:hover,
+li:hover,
+.food:hover {
+  cursor: pointer;
+  color: black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
