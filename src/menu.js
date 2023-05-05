@@ -72,7 +72,7 @@ const makeMenu = () => {
       0: "Sparkling Berry Juice",
     },
     item4: {
-      1: "assets/item_Wolfhook_Juice.webp",
+      1: "assets/Item_Wolfhook_Juice.webp",
       2: "1500",
       3: "A freshly squeezed, fashionable, and fruity non-alcoholic beverage. Iced Wolfhook juice mixed with a pinch of other ingredients, forming a dreamy shade of violet.",
       4: "wolfhook juice",
