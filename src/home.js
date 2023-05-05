@@ -18,6 +18,7 @@ export const homeContent = () => {
   const img = document.createElement("img");
   img.className = "showRoom";
   img.src = "assets/angels-share-exterior.png";
+  img.alt = "angel's share exterior";
   container.appendChild(img);
 
   container.appendChild(

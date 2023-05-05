@@ -22,6 +22,7 @@ const makeAbout = () => {
   const ownerPic = document.createElement("img");
   ownerPic.className = "owner";
   ownerPic.src = "assets/diluc_icon.webp";
+  ownerPic.alt = "owner";
   container.append(ownerPic);
 
   container.append(makeH3("Meet the Owner: Diluc!", "aboutInfo"));
