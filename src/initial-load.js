@@ -29,7 +29,7 @@ const createHeader = () => {
   navContainer.append(navTitle);
 
   const navLogo = document.createElement("img");
-  navLogo.src = "../dist/assets/noctua_shape.webp";
+  navLogo.src = "assets/noctua_shape.webp";
   navLogo.className = "logo";
   navContainer.appendChild(navLogo);
 
